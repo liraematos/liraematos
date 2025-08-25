@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <!-- Meta description -->
+  <meta name="description" content="Clínica de massoterapia em São Paulo com técnicas de relaxamento e terapêuticas. Agende sua sessão hoje!">
+
+  <!-- Meta keywords (opcional, não influencia tanto) -->
+  <meta name="keywords" content="massoterapia, massagem relaxante, reiki, ventosa, São Paulo">
+
+  <!-- Open Graph / Social sharing (Facebook, Instagram, etc.) -->
+  <meta property="og:title" content="Massoterapia em São Paulo | Clínica Claudio & Amanda">
+  <meta property="og:description" content="Clínica de massoterapia em São Paulo com técnicas de relaxamento e terapêuticas. Agende sua sessão hoje!">
+  <meta property="og:image" content="link-da-imagem.jpg">
+  <meta property="og:url" content="https://liraematos.com.br">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Massoterapia em São Paulo | Clínica Claudio & Amanda">
+  <meta name="twitter:description" content="Clínica de massoterapia em São Paulo com técnicas de relaxamento e terapêuticas. Agende sua sessão hoje!">
+  <meta name="twitter:image" content="link-da-imagem.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/tantra/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/tantra/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/tantra/favicon-16x16.png">
+<link rel="manifest" href="/masso/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lira & Matos - Tantra | Bem-estar Emocional e Energético</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .chakra-gradient {
+            background: linear-gradient(135deg, 
+                #e53e3e 0%,   /* Vermelho */
+                #fd7f28 14%,  /* Laranja */
+                #ffd700 28%,  /* Amarelo */
+                #38a169 42%,  /* Verde */
+                #3182ce 57%,  /* Azul */
+                #553c9a 71%,  /* Anil */
+                #805ad5 85%   /* Violeta */
+            );
+        }
+        
+        .chakra-text {
+            background: linear-gradient(135deg, 
+                #e53e3e 0%, #fd7f28 14%, #ffd700 28%, #38a169 42%, 
+                #3182ce 57%, #553c9a 71%, #805ad5 85%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        .chakra-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .chakra-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .slide-in-left.visible,
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .bounce-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .glow-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(168, 85, 247, 0.4), transparent);
+            animation: rotate 4s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .text-shimmer {
+            background: linear-gradient(90deg, #e53e3e, #fd7f28, #ffd700, #38a169, #3182ce, #553c9a, #805ad5);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .morphing-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        
+        @keyframes morph {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+            75% { border-radius: 60% 40% 60% 30% / 60% 30% 60% 70%; }
+        }
+        
+        @media (max-width: 768px) {
+            .floating-animation {
+                animation-duration: 4s;
+            }
+            
+            .chakra-card {
+                backdrop-filter: blur(10px);
+            }
+            
+            .fade-in {
+                transform: translateY(30px) scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold chakra-text">Lira & Matos</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:text-purple-400 transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-purple-400 transition-colors">Sobre</a>
+                    <a href="#filosofias" class="hover:text-purple-400 transition-colors">Filosofias</a>
+                    <a href="#tantra" class="hover:text-purple-400 transition-colors">O que é Tantra</a>
+                    <a href="#beneficios" class="hover:text-purple-400 transition-colors">Benefícios</a>
+                    <a href="#atendimentos" class="hover:text-purple-400 transition-colors">Atendimentos</a>
+                    <a href="#contato" class="hover:text-purple-400 transition-colors">Contato</a>
+                </div>
+                <button class="md:hidden text-white" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#inicio" class="block py-2 hover:text-purple-400 transition-colors">Início</a>
+                <a href="#sobre" class="block py-2 hover:text-purple-400 transition-colors">Sobre</a>
+                <a href="#filosofias" class="block py-2 hover:text-purple-400 transition-colors">Filosofias</a>
+                <a href="#tantra" class="block py-2 hover:text-purple-400 transition-colors">O que é Tantra</a>
+                <a href="#beneficios" class="block py-2 hover:text-purple-400 transition-colors">Benefícios</a>
+                <a href="#atendimentos" class="block py-2 hover:text-purple-400 transition-colors">Atendimentos</a>
+                <a href="#contato" class="block py-2 hover:text-purple-400 transition-colors">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Início -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 chakra-gradient opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-shimmer">
+                    Desperte Sua Essência
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto px-4">
+                    Transforme ansiedade em serenidade, bloqueios em fluidez, e reconecte-se com sua verdadeira natureza através do Tantra
+                </p>
+                <a href="#contato" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 glow-effect">
+                    Inicie Sua Jornada
+                </a>
+            </div>
+        </div>
+        
+        <!-- Elementos decorativos flutuantes -->
+        <div class="absolute top-20 left-10 w-4 h-4 bg-red-500 rounded-full opacity-60 floating-animation" style="animation-delay: 0s;"></div>
+        <div class="absolute top-40 right-20 w-6 h-6 bg-orange-500 rounded-full opacity-60 floating-animation" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-20 w-5 h-5 bg-yellow-500 rounded-full opacity-60 floating-animation" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 right-10 w-4 h-4 bg-green-500 rounded-full opacity-60 floating-animation" style="animation-delay: 3s;"></div>
+        <div class="absolute top-60 left-1/4 w-3 h-3 bg-blue-500 rounded-full opacity-60 floating-animation" style="animation-delay: 4s;"></div>
+        <div class="absolute bottom-60 right-1/4 w-5 h-5 bg-indigo-500 rounded-full opacity-60 floating-animation" style="animation-delay: 5s;"></div>
+        <div class="absolute top-80 right-1/3 w-4 h-4 bg-purple-500 rounded-full opacity-60 floating-animation" style="animation-delay: 6s;"></div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">Sobre</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Somos Claudio Lira e Amanda Matos, dedicados a guiar pessoas em sua jornada de autoconhecimento e transformação energética
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+                <div class="slide-in-left">
+                    <div class="chakra-card rounded-2xl p-6 sm:p-8">
+                        <div class="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 sm:w-10 h-8 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-center">Nossa Missão</h3>
+                        <p class="text-gray-300 text-center leading-relaxed text-sm sm:text-base">
+                            Ajudamos pessoas a se reconectarem consigo mesmas, dissolvendo bloqueios emocionais e energéticos que impedem o pleno florescimento do ser. Através do Tantra, oferecemos um caminho seguro para a expansão da consciência e o equilíbrio interior.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <div class="chakra-card rounded-2xl p-6 sm:p-8 morphing-blob">
+                        <div class="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 sm:w-10 h-8 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-center">Nossa Abordagem</h3>
+                        <p class="text-gray-300 text-center leading-relaxed text-sm sm:text-base">
+                            Combinamos técnicas milenares do Tantra com uma compreensão moderna do bem-estar emocional. Criamos um espaço acolhedor onde cada pessoa pode explorar sua essência de forma respeitosa, segura e transformadora.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofias -->
+    <section id="filosofias" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">Filosofias Ancestrais</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4">
+                    Nosso trabalho é fundamentado em tradições milenares que honram a união sagrada das energias e a expansão da consciência
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-16">
+                <div class="slide-in-left">
+                    <div class="chakra-card rounded-2xl p-6 sm:p-8">
+                        <div class="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-red-600 to-orange-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <span class="text-2xl sm:text-3xl">🔥</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-center">Kundalini</h3>
+                        <p class="text-gray-300 text-center leading-relaxed text-sm sm:text-base mb-4">
+                            A energia primordial que reside na base da coluna vertebral, representada pela serpente sagrada. Quando desperta, ela ascende pelos chakras, promovendo transformação profunda e expansão da consciência.
+                        </p>
+                        <p class="text-gray-400 text-center text-xs sm:text-sm">
+                            Trabalhamos com técnicas seguras de respiração, movimento e meditação para despertar gradualmente esta energia vital.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <div class="chakra-card rounded-2xl p-6 sm:p-8 morphing-blob">
+                        <div class="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <span class="text-2xl sm:text-3xl">☯️</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-center">Shiva & Shakti</h3>
+                        <p class="text-gray-300 text-center leading-relaxed text-sm sm:text-base mb-4">
+                            Shiva representa a consciência pura e imutável, enquanto Shakti é a energia criativa e dinâmica. A união dessas polaridades dentro de nós gera equilíbrio, completude e realização espiritual.
+                        </p>
+                        <p class="text-gray-400 text-center text-xs sm:text-sm">
+                            Exploramos o equilíbrio entre receptividade e ação, quietude e movimento, sendo e devir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 text-center fade-in">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-r from-green-600 to-teal-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-2xl sm:text-3xl">🌊</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Taoismo</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">
+                        A filosofia do Tao nos ensina sobre o fluxo natural da vida, o equilíbrio entre Yin e Yang, e a importância de viver em harmonia com os ciclos naturais. No contexto tântrico, integramos os princípios taoístas para cultivar a energia sexual como força vital e criativa.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 mt-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-3 mx-auto">
+                                <span class="text-lg">🌙</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Yin - Energia Receptiva</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm">Quietude, intuição, receptividade e profundidade interior</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-3 mx-auto">
+                                <span class="text-lg">☀️</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Yang - Energia Ativa</h4>
+                            <p class="text-gray-400 text-xs sm:text-sm">Ação, direcionamento, expressão e manifestação exterior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que é Tantra -->
+    <section id="tantra" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">O que é o Tantra</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4">
+                    O Tantra é uma antiga filosofia de vida que nos ensina a integrar corpo, mente e espírito, promovendo equilíbrio e expansão da consciência
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 text-center fade-in">
+                    <div class="w-14 sm:w-16 h-14 sm:h-16 bg-red-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <svg class="w-7 sm:w-8 h-7 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Energia Vital</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Desperta e harmoniza a energia vital que flui através dos chakras, promovendo vitalidade e bem-estar integral.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 text-center fade-in">
+                    <div class="w-14 sm:w-16 h-14 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <svg class="w-7 sm:w-8 h-7 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Consciência Plena</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Desenvolve a presença e a consciência plena, permitindo uma conexão mais profunda consigo mesmo e com o momento presente.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 text-center fade-in sm:col-span-2 lg:col-span-1">
+                    <div class="w-14 sm:w-16 h-14 sm:h-16 bg-purple-500 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <svg class="w-7 sm:w-8 h-7 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Equilíbrio Emocional</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Oferece ferramentas para processar emoções de forma saudável, transformando padrões limitantes em expansão e crescimento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">Benefícios</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Descubra como o Tantra pode transformar sua vida, trazendo equilíbrio, clareza e bem-estar duradouro
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-red-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">🧘</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Redução da Ansiedade</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Técnicas de respiração e presença que acalmam a mente e reduzem significativamente os níveis de ansiedade.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.1s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-orange-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Desbloqueio Energético</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Dissolve bloqueios que impedem o fluxo natural da energia vital, restaurando vitalidade e disposição.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.2s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-yellow-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">🌟</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Autoconhecimento</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Promove uma jornada profunda de descoberta pessoal, revelando potenciais e talentos únicos.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.3s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-green-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">☮️</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Paz Interior</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Cultiva um estado duradouro de serenidade e equilíbrio emocional, mesmo diante dos desafios.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.4s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Clareza Mental</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Desenvolve foco, concentração e uma mente mais clara para tomar decisões conscientes.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.5s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-indigo-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">💫</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Conexão Interior</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Fortalece a relação consigo mesmo, promovendo autoaceitação e amor próprio genuíno.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.6s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-purple-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">🌈</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Equilíbrio dos Chakras</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Harmoniza os centros energéticos, promovendo bem-estar físico, emocional e espiritual.
+                    </p>
+                </div>
+                
+                <div class="chakra-card rounded-xl p-4 sm:p-6 text-center bounce-in hover:transform hover:scale-105 transition-all" style="animation-delay: 0.7s;">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-pink-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        <span class="text-lg sm:text-2xl">🌸</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Redução do Estresse</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm">
+                        Oferece ferramentas eficazes para gerenciar e reduzir o estresse do dia a dia de forma natural.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atendimentos -->
+    <section id="atendimentos" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">Atendimentos</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Oferecemos sessões personalizadas em um ambiente seguro e acolhedor, respeitando o ritmo e as necessidades de cada pessoa
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 slide-in-left glow-effect">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 chakra-gradient rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 sm:w-10 h-8 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Sessões Individuais</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+                        Atendimento personalizado focado em suas necessidades específicas. Trabalhamos com técnicas de respiração, meditação ativa, desbloqueio energético e harmonização dos chakras.
+                    </p>
+                    <ul class="text-gray-300 space-y-2 mb-6 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Duração: 90 minutos
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                            Ambiente acolhedor e seguro
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Abordagem respeitosa e terapêutica
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Trabalho com Kundalini e chakras
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contato" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm sm:text-base font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+                            Agendar Sessão Individual
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 slide-in-right morphing-blob">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 chakra-gradient rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 sm:w-10 h-8 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Sessões para Casais</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+                        Experiência transformadora para casais que desejam aprofundar sua conexão íntima e espiritual. Exploramos a união sagrada das energias Shiva e Shakti através de práticas tântricas autênticas.
+                    </p>
+                    <ul class="text-gray-300 space-y-2 mb-6 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Duração: 2 horas
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            Práticas de conexão e presença
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                            Equilíbrio das energias Yin e Yang
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                            Comunicação consciente e intimidade
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contato" class="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-full text-sm sm:text-base font-semibold hover:from-red-700 hover:to-orange-700 transition-all transform hover:scale-105">
+                            Agendar Sessão para Casal
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <div class="chakra-card rounded-xl p-6 max-w-2xl mx-auto">
+                    <h4 class="text-lg sm:text-xl font-bold mb-4 chakra-text">Ambiente Sagrado e Seguro</h4>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Todos os nossos atendimentos são realizados em um espaço cuidadosamente preparado, com total respeito aos limites e consentimento de cada pessoa. Priorizamos a criação de um ambiente sagrado onde a transformação pode acontecer de forma natural e segura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 bounce-in">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 chakra-text">Contato</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                    Estamos aqui para acompanhar você em sua jornada de transformação. Entre em contato e dê o primeiro passo rumo ao seu bem-estar integral
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto text-center fade-in">
+                <div class="chakra-card rounded-2xl p-6 sm:p-8 lg:p-12 glow-effect">
+                    <div class="w-20 sm:w-24 h-20 sm:h-24 chakra-gradient rounded-full flex items-center justify-center mb-6 sm:mb-8 mx-auto morphing-blob">
+                        <svg class="w-10 sm:w-12 h-10 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Fale Conosco pelo WhatsApp</h3>
+                    <p class="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">
+                        Tire suas dúvidas, conheça nosso trabalho ou agende sua primeira sessão. Estamos prontos para recebê-lo com carinho e profissionalismo.
+                    </p>
+                    <a href="https://wa.me/5511942105424?text=Olá! Gostaria de saber mais sobre os atendimentos de Tantra para bem-estar emocional e energético." 
+                       target="_blank" 
+                       class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 sm:px-12 py-4 sm:py-6 rounded-full text-lg sm:text-xl font-semibold transition-all transform hover:scale-105 whatsapp-pulse">
+                        <svg class="w-5 sm:w-6 h-5 sm:h-6 inline-block mr-2 sm:mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                        </svg>
+                        Conversar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="chakra-text text-3xl font-bold mb-4">Lira & Matos</div>
+            <p class="text-gray-400 mb-6">Tantra • Bem-estar Emocional • Equilíbrio Energético</p>
+            <p class="text-gray-500 text-sm">
+                © 2025 Lira & Matos. Todos os direitos reservados. | Transformando vidas através do autoconhecimento e equilíbrio interior.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Fechar menu mobile se estiver aberto
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Animação de fade-in ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos os tipos de animação
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .bounce-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Efeito parallax suave nos elementos flutuantes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-animation');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'973e0cf2d688ca8a',t:'MTc1NTk4ODE4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
